@@ -1,0 +1,70 @@
+-------Roblox Original Launchers------
+2017:https://archive.org/details/roblox-player-launcher-1_202208
+2018:https://archive.org/details/roblox-player-launcher_202108
+2015:https://archive.org/details/roblox-player-launcher_202101
+2014:https://archive.org/details/roblox-player-launcher_202212
+
+all you have to do is this:
+change domain from roblox.com to your domain
+do trust check
+and now listen carefully
+string search for api.roblox.com
+and change api.roblox.com/%s/?apikey=%s
+to
+www.yourdomain.com/%s/?apikey=%s
+after that,
+you must patch clist
+1. string search sysstats
+2. double click "Players::onRemoteSysStats disconnect"
+3. jmp both jne and je, then change push 1 to push 0
+4. go back to the References tab
+5. double click "Players::onRemoteSysStats disconnect not in the clist"
+6. first jmp the je above it
+7. then jmp the jne above it
+8. change push 1 to push 0
+
+~ 2014-2017 ROBLOX Studio Name ~
+
+
+1. Open your roblox studio in x32dbg
+
+2. Spam the run button until it will load
+
+3. Make a new place and spam the run button until it will unfrooze
+
+4. Make sure you have command line on if not then get to VIEW toolbar and press on "Command Bar"
+
+5. Run this in command bar "game.Players:CreateLocalPlayer(0):LoadCharacter()" without quotes
+
+6. It will freeze the game again so go back to x32dbg and spam the run button
+
+7. Now get to x32dbg and get to Symbols tab and type "_CxxThrowException" without quotes
+
+8. Toggle breakpoint on "_CxxThrowException" by pressing on it with right click and "Toggle Breakpoint"
+
+9. Now get back to roblox studio (if it frooze then spam run button) and try to changing name in Players>Player1 (in Explorer)
+
+10. It will frooze the roblox now get back to x32dbg (DONT SPAM RUN BUTTON!) get to the "CPU" tab and find Time Wasted Debugging its right down corner on the screen
+
+11. Above the Time Wasted Debugging you will see red lines now double click on the highest (first) red line (dont scroll up)°
+
+12. It will bring you to debugger now scroll up about 8 times (of mouse scrolls) or 10 until you find a string called push 4 (mez1ner note: you may find unknown expection string if there is closer jne change it to jmp)
+
+13. Now change the push 4 to push 0
+
+14. Patch it and your done!
+[3:13]
+https://github.com/orcfoss/Roblox.Tools
+
+join & flags & asset link (created by )
+[3:13]
+corescripts 2010 - 2019 posted by 
+https://cdn.discordapp.com/attachments/1051619906388492320/1051626109856399441/CoreScripts_2010_-_20191.7z
+Contact watcha#0117 if this link expires
+[3:13]
+-------Roblox Original Launchers------
+2017:https://archive.org/details/roblox-player-launcher-1_202208
+2018:https://archive.org/details/roblox-player-launcher_202108
+2015:https://archive.org/details/roblox-player-launcher_202101
+2014:https://archive.org/details/roblox-player-launcher_202212
+

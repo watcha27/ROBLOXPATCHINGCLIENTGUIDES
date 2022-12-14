@@ -1,0 +1,120 @@
+haiiiii that guide patching 2014L
+that guide for NO ONE
+
+
+ok begin patch u need client, robloxtools(rbxsigtools), corescripts, x32dbg and php files
+
+1. u need open x32dbg and drag robloxplayerbeta.exe
+
+2. click a symbols, and double click robloxplayerbeta.exe
+
+3. in the top right corner, u need see a small (Az or A2 idk) Icon click it
+
+---------------------PATCHING--------------------------
+
+site patch: (that simple lol)
+
+1. search roblox.com
+
+(YOU NEED A DOMAIN 10 CHARACTER NAMES!!!)
+
+2. replace all of the roblox links double click
+
+3. to replace them, right click them, hover over "follow in dump" and click the address below "selected address"
+
+4. ctrl + e for changing a domain
+
+5. and change appsettings.xml!!!
+
+
+blocking %s patch:
+
+1. search blocking %s
+
+2. double click it 
+
+3. scroll up a bit, above a few jbs, then a je. change je to jmp
+
+
+analytics / game patch:
+
+1. search analytics
+
+2. double click the string thats JUST analytics
+
+3. scroll up to find the string
+
+4. change the above jne to a jmp
+
+
+public key patch:
+
+1. search BGIAA
+
+2. u have generated a key from rbxsigtools
+
+3. copy that key from PublicKeyBlob.txt
+
+4. right click the very long string in CPU, and hover over "follow in dump" and click the address "Value [any numbers idk]"
+
+5. ctrl + e for changing a key
+
+
+
+invalid request + invalid request 2-5 patch:
+
+1. search invalid request
+
+2. in every single one there is a jne or je above it, change it to jmp
+
+
+!isKeyboardAcquired patch:
+
+1. search !isKeyboardAcquired
+
+2. double click the string thats JUST !isKeyboardAcquired
+
+3. scroll down a bit, you will see a push 5
+
+4. change it to push 6
+
+
+fflags for 2013:
+
+1. create folder in your client ClientSettings
+
+2. create file in folder ClientAppSettings.json
+
+3. and copy that text and paste in ClientAppSettings.json here text: {"ReconstructAssetUrlNew": "True","FFlagReconstructAssetUrl": "True","FFlagPhysics60HZ":"True","FFlagPathfindingEnabled":"True","FFlagUseKeyframeHumanoidAnimations":"True","FFlagRenderNewMaterials": true,"FFlagNewWaterMaterialEnable": true}
+
+
+fflags for 2014:
+(yes yes yes ik what is this...)
+
+1. search %s://%sapi.roblox.com/%s/?apiKey=%s
+
+2. replace with http://www.<YOUR WEBSITE DOMAIN>/2014Lfflag/
+
+3. yeah yeah u need to go ur webhoster, create a folder in ur site "2014Lfflag"
+
+4. create file "index.php"
+
+5. and copy that
+
+<?php
+	header("Content-Type: text/plain");
+	ob_start();
+?>
+{"ReconstructAssetUrlNew": "True","FFlagReconstructAssetUrl":"True","DFFlagReconstructAssetUrl":"True","FFlagPhysics60HZ":"True","FFlagPathfindingEnabled":"True","FFlagUseKeyframeHumanoidAnimations":"True","DFFlagUseKeyframeHumanoidAnimations":"True","DFFlagUseKeyframeHumanoidAnimations":"True","DFFLagLoadAnimationsThroughInsertService":"True","FFLagLoadAnimationsThroughInsertService":"True",,"FFlagAnimationFormatAssetId": "True","DFFlagAnimationFormatAssetId": "True","FFlagAddPlaceIdToAnimationRequests": "True","DFFlagAddPlaceIdToAnimationRequests": "True","FFlagEnableAnimationExport": "True","DFFlagEnableAnimationExport": "True", "FFlagAnimationAllowProdUrls": "True","DFFlagAnimationAllowProdUrls": "True","FFlagSSAOForce":"True","DFFlagSSAOForce":"True","FFlagNewWaterMaterialEnable":"True","DFFlagNewWaterMaterialEnable":"True","FFlagCreateHumanoidRootNode":"True","DFFlagCreateHumanoidRootNode":"True","FFlagUseCharacterRootForCameraTarget":"True","DFFlagUseCharacterRootForCameraTarget":"True","FFlagRenderNewMaterials":"False","DFFlagRenderNewMaterials":"False","DFFlagUseNewSounds":"True","FFlagUseNewSounds":"True","FFlagUserHttpAPIEnabled":"True","FFlagDataStoreEnabled":"True","DFFlagDataStoreEnabled":"True","FFlagConsoleCodeExecutionEnabled":"True","DFFlagConsoleCodeExecutionEnabled":"True","FFlagLoggingConsoleEnabled":"True","DFFlagLoggingConsoleEnabled":"True","FFlagUseNewSoundEngine":"True","DFFlagUseNewSoundEngine":"True","FFlagLocalHumanoidSoundsEnabled":"True","DFFlagLocalHumanoidSoundsEnabled":"True","FFlagRibbonBarEnabled":"True","DFFlagRibbonBarEnabled":"True","FFlagPointsServiceDisabledIfLoadStringEnabled":"False","FFlagPointsServiceEnabledForEveryone":"False","FFlagClientAdditionalPOSTHeaders":"True","FFlagToggleDevConsoleThroughChatCommandEnabled":"True","FFlagRibbonBarEnabledGA":"True","DFFlagRibbonBarEnabledGA":"True","DFFlagClientAdditionalPOSTHeaders":"True","FFlagCSGToolsEnabled":"True","DFFlagCSGToolsEnabled":"True","FFlagCSGMeshRenderEnable":"True","DFFlagCSGMeshRenderEnable":"True","FFlagCSGScaleEnabled":"True","DFFlagCSGScaleEnabled":"True","FFlagCSGDictionaryServiceEnabled":"True","DFFlagCSGDictionaryServiceEnabled":"True","FFlagCSGChangeHistory":"True","DFFlagCSGChangeHistory":"True","FFlagRenderMaterialsOnMobile":"True","DFFlagRenderMaterialsOnMobile":"True","FFlagUseFollowCamera":"True","DFFlagUseFollowCamera":"True","FFlagQtFixToolDragging":"True","DFFlagQtFixToolDragging":"True","FFlagHeartbeatAt60Hz":"True","DFFlagHeartbeatAt60Hz":"True","FFlagDynamicEnvmapEnabled":"True","DFFlagDynamicEnvmapEnabled":"True","FFlagBinaryStringReplicationFix":"True","DFFlagBinaryStringReplicationFix":"True","FFlagNewLoadingScreen":True","DFFlagNewLoadingScreen":"True","FFlagReplicatedFirstEnabled":"True","DFFlagReplicatedFirstEnabled":"True","FFlagUseImprovedLadderClimb":"True","DFFlagUseImprovedLadderClimb":"True","FFlagInGamePurchases":"True","DFFlagInGamePurchases":"True","DFFLagDebugLocalRccServerConnection":"False","FFlagDebugLocalRccServerConnection":"False","FFlagCSGDecalsEnabled":"True","DFFlagCSGDecalsEnabled":"True","FFlagCSGMeshColorEnable":"True","DFFlagCSGMeshColorEnable":"True","FFlagUseImageColor":"True","DFFlagUseImageColor":"True","FFlagQtPlaySoloOptimization":"True","DFFlagQtPlaySoloOptimization":"True","FFlagRenderFixCameraFocus":"True","DFFlagRenderFixCameraFocus":"True","FFlagRenderThumbModelReflectionsFix":"True","DFFlagRenderThumbModelReflectionsFix":"True","FFlagCustomEmitterRenderEnabled":"True","DFFlagUserHttpAPIEnabled":"True","FFlagPhysicsCSGUsesBullet":"False","DFFlagPhysicsCSGUsesBullet":"False"}
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+that end i hope i helped u
+
+
+
+
+
+
